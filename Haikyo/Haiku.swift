@@ -14,7 +14,7 @@ class Haiku: ObservableObject {
     let haikuDB = HaikuDataBase()
 
     func getRandomHaiku() {
-        let number = Int.random(in: 0..<3)
+        let number = Int.random(in: 0 ..< haikuDB.haikus.count)
         haiku = haikuDB.haikus[number]
     }
     

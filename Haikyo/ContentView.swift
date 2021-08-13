@@ -19,8 +19,13 @@ struct ContentView: View {
                 Text("\(dailyHaiku.haiku[1])")
                 Text("\(dailyHaiku.haiku[2])")
             }
-            Button("TAP", action: { self.dailyHaiku.getRandomHaiku() })
         }
+        // Makes the whole screen tappable:
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .contentShape(Rectangle())
+        .onTapGesture(perform: {
+            self.dailyHaiku.getRandomHaiku()
+        })
     }
 }
 
