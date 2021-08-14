@@ -15,6 +15,13 @@
 		68A6916326C6D38000DDD92D /* HaikyoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6916226C6D38000DDD92D /* HaikyoUITests.swift */; };
 		68A6917126C6D61300DDD92D /* Haiku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6917026C6D61300DDD92D /* Haiku.swift */; };
 		68A6917326C6D67200DDD92D /* HaikuDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6917226C6D67200DDD92D /* HaikuDataBase.swift */; };
+		68A6917B26C7D8B800DDD92D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A6917A26C7D8B800DDD92D /* WidgetKit.framework */; };
+		68A6917D26C7D8B800DDD92D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A6917C26C7D8B800DDD92D /* SwiftUI.framework */; };
+		68A6918026C7D8B800DDD92D /* HaikyoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6917F26C7D8B800DDD92D /* HaikyoWidget.swift */; };
+		68A6918326C7D8BA00DDD92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A6918226C7D8BA00DDD92D /* Assets.xcassets */; };
+		68A6918526C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 68A6918126C7D8B800DDD92D /* HaikyoWidget.intentdefinition */; };
+		68A6918626C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 68A6918126C7D8B800DDD92D /* HaikyoWidget.intentdefinition */; };
+		68A6918926C7D8BA00DDD92D /* HaikyoWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68A6917826C7D8B800DDD92D /* HaikyoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +39,28 @@
 			remoteGlobalIDString = 68A6914126C6D37E00DDD92D;
 			remoteInfo = Haikyo;
 		};
+		68A6918726C7D8BA00DDD92D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68A6913A26C6D37E00DDD92D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68A6917726C7D8B800DDD92D;
+			remoteInfo = HaikyoWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		68A6918D26C7D8BA00DDD92D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				68A6918926C7D8BA00DDD92D /* HaikyoWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		68A6914226C6D37E00DDD92D /* Haikyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haikyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +77,15 @@
 		68A6916426C6D38000DDD92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68A6917026C6D61300DDD92D /* Haiku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haiku.swift; sourceTree = "<group>"; };
 		68A6917226C6D67200DDD92D /* HaikuDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuDataBase.swift; sourceTree = "<group>"; };
+		68A6917826C7D8B800DDD92D /* HaikyoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HaikyoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A6917A26C7D8B800DDD92D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		68A6917C26C7D8B800DDD92D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		68A6917F26C7D8B800DDD92D /* HaikyoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikyoWidget.swift; sourceTree = "<group>"; };
+		68A6918126C7D8B800DDD92D /* HaikyoWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = HaikyoWidget.intentdefinition; sourceTree = "<group>"; };
+		68A6918226C7D8BA00DDD92D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68A6918426C7D8BA00DDD92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68A6918E26C7E74200DDD92D /* Haikyo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Haikyo.entitlements; sourceTree = "<group>"; };
+		68A6918F26C7E7D800DDD92D /* HaikyoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaikyoWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,15 +110,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68A6917526C7D8B800DDD92D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A6917D26C7D8B800DDD92D /* SwiftUI.framework in Frameworks */,
+				68A6917B26C7D8B800DDD92D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		68A6913926C6D37E00DDD92D = {
 			isa = PBXGroup;
 			children = (
+				68A6918F26C7E7D800DDD92D /* HaikyoWidgetExtension.entitlements */,
 				68A6914426C6D37E00DDD92D /* Haikyo */,
 				68A6915626C6D38000DDD92D /* HaikyoTests */,
 				68A6916126C6D38000DDD92D /* HaikyoUITests */,
+				68A6917E26C7D8B800DDD92D /* HaikyoWidget */,
+				68A6917926C7D8B800DDD92D /* Frameworks */,
 				68A6914326C6D37E00DDD92D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +141,7 @@
 				68A6914226C6D37E00DDD92D /* Haikyo.app */,
 				68A6915326C6D38000DDD92D /* HaikyoTests.xctest */,
 				68A6915E26C6D38000DDD92D /* HaikyoUITests.xctest */,
+				68A6917826C7D8B800DDD92D /* HaikyoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +149,7 @@
 		68A6914426C6D37E00DDD92D /* Haikyo */ = {
 			isa = PBXGroup;
 			children = (
+				68A6918E26C7E74200DDD92D /* Haikyo.entitlements */,
 				68A6914526C6D37E00DDD92D /* HaikyoApp.swift */,
 				68A6914726C6D37E00DDD92D /* ContentView.swift */,
 				68A6914926C6D38000DDD92D /* Assets.xcassets */,
@@ -136,6 +187,26 @@
 			path = HaikyoUITests;
 			sourceTree = "<group>";
 		};
+		68A6917926C7D8B800DDD92D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68A6917A26C7D8B800DDD92D /* WidgetKit.framework */,
+				68A6917C26C7D8B800DDD92D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68A6917E26C7D8B800DDD92D /* HaikyoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				68A6917F26C7D8B800DDD92D /* HaikyoWidget.swift */,
+				68A6918126C7D8B800DDD92D /* HaikyoWidget.intentdefinition */,
+				68A6918226C7D8BA00DDD92D /* Assets.xcassets */,
+				68A6918426C7D8BA00DDD92D /* Info.plist */,
+			);
+			path = HaikyoWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +217,12 @@
 				68A6913E26C6D37E00DDD92D /* Sources */,
 				68A6913F26C6D37E00DDD92D /* Frameworks */,
 				68A6914026C6D37E00DDD92D /* Resources */,
+				68A6918D26C7D8BA00DDD92D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				68A6918826C7D8BA00DDD92D /* PBXTargetDependency */,
 			);
 			name = Haikyo;
 			productName = Haikyo;
@@ -192,6 +265,23 @@
 			productReference = 68A6915E26C6D38000DDD92D /* HaikyoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		68A6917726C7D8B800DDD92D /* HaikyoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68A6918A26C7D8BA00DDD92D /* Build configuration list for PBXNativeTarget "HaikyoWidgetExtension" */;
+			buildPhases = (
+				68A6917426C7D8B800DDD92D /* Sources */,
+				68A6917526C7D8B800DDD92D /* Frameworks */,
+				68A6917626C7D8B800DDD92D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HaikyoWidgetExtension;
+			productName = HaikyoWidgetExtension;
+			productReference = 68A6917826C7D8B800DDD92D /* HaikyoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +302,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 68A6914126C6D37E00DDD92D;
 					};
+					68A6917726C7D8B800DDD92D = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 				};
 			};
 			buildConfigurationList = 68A6913D26C6D37E00DDD92D /* Build configuration list for PBXProject "Haikyo" */;
@@ -230,6 +323,7 @@
 				68A6914126C6D37E00DDD92D /* Haikyo */,
 				68A6915226C6D38000DDD92D /* HaikyoTests */,
 				68A6915D26C6D38000DDD92D /* HaikyoUITests */,
+				68A6917726C7D8B800DDD92D /* HaikyoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +352,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68A6917626C7D8B800DDD92D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A6918326C7D8BA00DDD92D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,6 +371,7 @@
 				68A6917326C6D67200DDD92D /* HaikuDataBase.swift in Sources */,
 				68A6917126C6D61300DDD92D /* Haiku.swift in Sources */,
 				68A6914626C6D37E00DDD92D /* HaikyoApp.swift in Sources */,
+				68A6918626C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +391,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68A6917426C7D8B800DDD92D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A6918026C7D8B800DDD92D /* HaikyoWidget.swift in Sources */,
+				68A6918526C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -300,6 +412,11 @@
 			isa = PBXTargetDependency;
 			target = 68A6914126C6D37E00DDD92D /* Haikyo */;
 			targetProxy = 68A6915F26C6D38000DDD92D /* PBXContainerItemProxy */;
+		};
+		68A6918826C7D8BA00DDD92D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68A6917726C7D8B800DDD92D /* HaikyoWidgetExtension */;
+			targetProxy = 68A6918726C7D8BA00DDD92D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,8 +540,10 @@
 		68A6916826C6D38000DDD92D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Haikyo/Haikyo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Haikyo/Preview Content\"";
 				DEVELOPMENT_TEAM = HNL8ZJJ645;
@@ -445,8 +564,10 @@
 		68A6916926C6D38000DDD92D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Haikyo/Haikyo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Haikyo/Preview Content\"";
 				DEVELOPMENT_TEAM = HNL8ZJJ645;
@@ -548,6 +669,50 @@
 			};
 			name = Release;
 		};
+		68A6918B26C7D8BA00DDD92D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HaikyoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HNL8ZJJ645;
+				INFOPLIST_FILE = HaikyoWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = blog.tilcode.Haikyo.HaikyoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68A6918C26C7D8BA00DDD92D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = HaikyoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HNL8ZJJ645;
+				INFOPLIST_FILE = HaikyoWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = blog.tilcode.Haikyo.HaikyoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +748,15 @@
 			buildConfigurations = (
 				68A6916E26C6D38000DDD92D /* Debug */,
 				68A6916F26C6D38000DDD92D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68A6918A26C7D8BA00DDD92D /* Build configuration list for PBXNativeTarget "HaikyoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68A6918B26C7D8BA00DDD92D /* Debug */,
+				68A6918C26C7D8BA00DDD92D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

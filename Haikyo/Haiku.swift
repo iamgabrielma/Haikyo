@@ -20,6 +20,8 @@ class Haiku: ObservableObject {
     
     init() {
         self.haiku = haikuDB.haikus[0]
+        // Init values so it doesn't crash...still broken :_D
+        //UserDefaults.standard.setValue(self.haiku, forKey: "dailyHaiku")
     }
     
 
