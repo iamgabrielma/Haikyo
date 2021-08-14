@@ -12,16 +12,18 @@ class Haiku: ObservableObject {
     @Published var haiku: [String]
     
     let haikuDB = HaikuDataBase()
-
-    func getRandomHaiku() {
-        let number = Int.random(in: 0 ..< haikuDB.haikus.count)
-        haiku = haikuDB.haikus[number]
-    }
     
     init() {
         self.haiku = haikuDB.haikus[0]
-        // Init values so it doesn't crash...still broken :_D
-        //UserDefaults.standard.setValue(self.haiku, forKey: "dailyHaiku")
+    }
+    
+    func getRandomHaiku() {
+        // Randomize which Haiku we'll select from the DB Object
+        let number = Int.random(in: 0 ..< haikuDB.haikus.count)
+        let userDefaults = UserDefaults(suiteName: "group.haikyodata")
+        // Set the @Published object (for the app) and fill UserDefaults (for the widget) with the same value
+        haiku = haikuDB.haikus[number]
+        userDefaults?.setValue(haiku, forKey: "dailyHaiku")
     }
     
 

@@ -10,30 +10,28 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
-    // WIP: The app crashes when tap to the net haiku because of the unwrapped optional. Fixed temporarily with nil-coalescent
-    @State private var currentDailyHaiku = UserDefaults.standard.stringArray(forKey: "dailyHaiku") ?? ["a","b","c"]
-    
+
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), haiku: currentDailyHaiku, configuration: ConfigurationIntent())
+        SimpleEntry(date: Date(), haiku: ["","",""], configuration: ConfigurationIntent())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), haiku: currentDailyHaiku, configuration: configuration)
+        let entry = SimpleEntry(date: Date(), haiku: ["","",""], configuration: configuration)
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
-        // WIP: Passing data from user defaults:
         let userDefaults = UserDefaults(suiteName: "group.haikyodata")
-        let haiku = userDefaults?.value(forKey: "dailyHaiku" ?? "UserDefaults empty")
-        
+        let dailyHaiku = userDefaults?.value(forKey: "dailyHaiku") ?? ["","",""]
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, haiku: currentDailyHaiku, configuration: configuration)
+            let entry = SimpleEntry(    date: entryDate,
+                                        haiku: dailyHaiku as! [String],
+                                        configuration: configuration)
             entries.append(entry)
         }
 
@@ -44,20 +42,21 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let haiku: [String] // <-- this should come from UserDefaults
+    let haiku: [String] // <-- This will come from UserDefaults
     let configuration: ConfigurationIntent
 }
 
 struct HaikyoWidgetEntryView : View {
     
     var entry: Provider.Entry
-
+    
     var body: some View {
-        Text(entry.date, style: .time)
-        Text(entry.haiku[0])
-        //Text(entry.haiku[0])
-        //Text(entry.haiku[1])
-        //Text(entry.haiku[2])
+        // Each line of the Haiku:
+        Text(entry.haiku[0]).font(.caption)
+        Text("·")
+        Text(entry.haiku[1]).font(.caption)
+        Text("·")
+        Text(entry.haiku[2]).font(.caption)
     }
 }
 

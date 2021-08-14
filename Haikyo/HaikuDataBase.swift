@@ -17,4 +17,5 @@ struct HaikuDataBase {
         ["The howling stormsong", "Across pavement the rain dances", "Umbrellas blooming"],
         ["Forking red hot stones", "In the tent demons are loosed", "Fragrant heat, Sage broom"]
     ]
+
 }
