@@ -13,23 +13,7 @@ struct ContentView: View {
     @ObservedObject private var dailyHaiku = Haiku()
     
     var body: some View {
-        
-        VStack {
-            HStack{
-                Text("\(dailyHaiku.haiku[0])")
-                Text("\(dailyHaiku.haiku[1])")
-                Text("\(dailyHaiku.haiku[2])")
-            }
-        }
-        // Makes the whole screen tappable:
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .contentShape(Rectangle())
-        .onTapGesture(perform: {
-            // Sets a new Haiku for both the app and the widget:
-            self.dailyHaiku.getRandomHaiku()
-            //Reload widget-associated data:
-            WidgetCenter.shared.reloadAllTimelines()
-        })
+        HaikuView()
     }
 }
 

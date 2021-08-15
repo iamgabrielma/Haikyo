@@ -22,6 +22,7 @@
 		68A6918526C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 68A6918126C7D8B800DDD92D /* HaikyoWidget.intentdefinition */; };
 		68A6918626C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 68A6918126C7D8B800DDD92D /* HaikyoWidget.intentdefinition */; };
 		68A6918926C7D8BA00DDD92D /* HaikyoWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68A6917826C7D8B800DDD92D /* HaikyoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68A6919126C8F11A00DDD92D /* HaikuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6919026C8F11A00DDD92D /* HaikuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		68A6918426C7D8BA00DDD92D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68A6918E26C7E74200DDD92D /* Haikyo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Haikyo.entitlements; sourceTree = "<group>"; };
 		68A6918F26C7E7D800DDD92D /* HaikyoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaikyoWidgetExtension.entitlements; sourceTree = "<group>"; };
+		68A6919026C8F11A00DDD92D /* HaikuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				68A6914B26C6D38000DDD92D /* Preview Content */,
 				68A6917026C6D61300DDD92D /* Haiku.swift */,
 				68A6917226C6D67200DDD92D /* HaikuDataBase.swift */,
+				68A6919026C8F11A00DDD92D /* HaikuView.swift */,
 			);
 			path = Haikyo;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				68A6914826C6D37E00DDD92D /* ContentView.swift in Sources */,
 				68A6917326C6D67200DDD92D /* HaikuDataBase.swift in Sources */,
 				68A6917126C6D61300DDD92D /* Haiku.swift in Sources */,
+				68A6919126C8F11A00DDD92D /* HaikuView.swift in Sources */,
 				68A6914626C6D37E00DDD92D /* HaikyoApp.swift in Sources */,
 				68A6918626C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */,
 			);
