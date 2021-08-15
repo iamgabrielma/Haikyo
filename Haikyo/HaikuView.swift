@@ -18,9 +18,25 @@ struct HaikuView: View {
         GeometryReader{ container in
             VStack {
                 HStack{
-                    Text("\(dailyHaiku.haiku[0])").frame(width: container.size.width * 0.33)
-                    Text("\(dailyHaiku.haiku[1])").frame(width: container.size.width * 0.33)
-                    Text("\(dailyHaiku.haiku[2])").frame(width: container.size.width * 0.33)
+                    
+                    Text("\(dailyHaiku.haiku[0])")
+                        .frame(width: container.size.width * 0.33, height: container.size.height)
+                        .background(Color(UIColor.systemGray2))
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(UIColor.white))
+                        .multilineTextAlignment(.center)
+                    
+                    Text("\(dailyHaiku.haiku[1])").frame(width: container.size.width * 0.33, height: container.size.height)
+                        .background(Color(UIColor.systemGray6))
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(UIColor.black))
+                        .multilineTextAlignment(.center)
+                    
+                    Text("\(dailyHaiku.haiku[2])").frame(width: container.size.width * 0.33, height: container.size.height)
+                        .background(Color(UIColor.systemGray2))
+                        .font(.system(size: 20))
+                        .foregroundColor(Color(UIColor.white))
+                        .multilineTextAlignment(.center)
                 }
             }
             // Makes the whole screen tappable:
