@@ -11,9 +11,23 @@ import WidgetKit
 struct ContentView: View {
     
     @ObservedObject private var dailyHaiku = Haiku()
+    @State private var isSharing = false
+    
+    func shareButton() {
+        isSharing.toggle()
+        
+        let str = "Share the wisdom"
+        let sharingActivity = UIActivityViewController(activityItems: [str], applicationActivities: nil)
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(sharingActivity, animated: true, completion: nil)
+        
+    }
     
     var body: some View {
         HaikuView()
+        Button(action: shareButton){
+            Image(systemName: "square.and.arrow.up")
+        }
     }
 }
 
