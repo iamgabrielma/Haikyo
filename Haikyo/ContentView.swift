@@ -16,8 +16,8 @@ struct ContentView: View {
     func shareButton() {
         isSharing.toggle()
         
-        let testURL = URL(string: "https://apple.com")
-        let sharingActivity = UIActivityViewController(activityItems: [testURL!], applicationActivities: nil)
+        let str = "Share the wisdom"
+        let sharingActivity = UIActivityViewController(activityItems: [str], applicationActivities: nil)
         
         UIApplication.shared.windows.first?.rootViewController?.present(sharingActivity, animated: true, completion: nil)
         
