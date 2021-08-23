@@ -22,19 +22,20 @@ struct HaikuView: View {
                     Text("\(dailyHaiku.haiku[0])")
                         .frame(width: container.size.width * 0.33, height: container.size.height)
                         .background(Color(dailyHaiku.haikuStyle[0]))
-                        .font(.system(size: 20))
+                        .font(.system(size: 28))
                         .foregroundColor(Color(UIColor.white))
                         .multilineTextAlignment(.center)
+                        //.rotationEffect(.degrees(-90), anchor: .zero)
                     
                     Text("\(dailyHaiku.haiku[1])").frame(width: container.size.width * 0.33, height: container.size.height)
                         .background(Color(dailyHaiku.haikuStyle[1]))
-                        .font(.system(size: 20))
+                        .font(.system(size: 28))
                         .foregroundColor(Color(UIColor.black))
                         .multilineTextAlignment(.center)
                     
                     Text("\(dailyHaiku.haiku[2])").frame(width: container.size.width * 0.33, height: container.size.height)
                         .background(Color(dailyHaiku.haikuStyle[0]))
-                        .font(.system(size: 20))
+                        .font(.system(size: 28))
                         .foregroundColor(Color(UIColor.white))
                         .multilineTextAlignment(.center)
                 }
