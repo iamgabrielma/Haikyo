@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6832C7A926D38FEF00BA4088 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6832C7A826D38FEF00BA4088 /* Constants.swift */; };
 		68A6914626C6D37E00DDD92D /* HaikyoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6914526C6D37E00DDD92D /* HaikyoApp.swift */; };
 		68A6914826C6D37E00DDD92D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6914726C6D37E00DDD92D /* ContentView.swift */; };
 		68A6914A26C6D38000DDD92D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A6914926C6D38000DDD92D /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6832C7A826D38FEF00BA4088 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		68A6914226C6D37E00DDD92D /* Haikyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haikyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A6914526C6D37E00DDD92D /* HaikyoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaikyoApp.swift; sourceTree = "<group>"; };
 		68A6914726C6D37E00DDD92D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				68A6917026C6D61300DDD92D /* Haiku.swift */,
 				68A6917226C6D67200DDD92D /* HaikuDataBase.swift */,
 				68A6919026C8F11A00DDD92D /* HaikuView.swift */,
+				6832C7A826D38FEF00BA4088 /* Constants.swift */,
 			);
 			path = Haikyo;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				68A6917326C6D67200DDD92D /* HaikuDataBase.swift in Sources */,
 				68A6917126C6D61300DDD92D /* Haiku.swift in Sources */,
 				68A6919126C8F11A00DDD92D /* HaikuView.swift in Sources */,
+				6832C7A926D38FEF00BA4088 /* Constants.swift in Sources */,
 				68A6914626C6D37E00DDD92D /* HaikyoApp.swift in Sources */,
 				68A6918626C7D8BA00DDD92D /* HaikyoWidget.intentdefinition in Sources */,
 			);

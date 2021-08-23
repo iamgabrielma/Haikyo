@@ -21,19 +21,19 @@ struct HaikuView: View {
                     
                     Text("\(dailyHaiku.haiku[0])")
                         .frame(width: container.size.width * 0.33, height: container.size.height)
-                        .background(Color(UIColor.systemGray2))
+                        .background(Color(dailyHaiku.haikuStyle[0]))
                         .font(.system(size: 20))
                         .foregroundColor(Color(UIColor.white))
                         .multilineTextAlignment(.center)
                     
                     Text("\(dailyHaiku.haiku[1])").frame(width: container.size.width * 0.33, height: container.size.height)
-                        .background(Color(UIColor.systemGray6))
+                        .background(Color(dailyHaiku.haikuStyle[1]))
                         .font(.system(size: 20))
                         .foregroundColor(Color(UIColor.black))
                         .multilineTextAlignment(.center)
                     
                     Text("\(dailyHaiku.haiku[2])").frame(width: container.size.width * 0.33, height: container.size.height)
-                        .background(Color(UIColor.systemGray2))
+                        .background(Color(dailyHaiku.haikuStyle[0]))
                         .font(.system(size: 20))
                         .foregroundColor(Color(UIColor.white))
                         .multilineTextAlignment(.center)
@@ -45,6 +45,8 @@ struct HaikuView: View {
             .onTapGesture(perform: {
                 // Sets a new Haiku for both the app and the widget:
                 self.dailyHaiku.getRandomHaiku()
+                // Changes style on each Haiku load:
+                self.dailyHaiku.setRandomStyle()
                 //Reload widget-associated data:
                 WidgetCenter.shared.reloadAllTimelines()
             })
